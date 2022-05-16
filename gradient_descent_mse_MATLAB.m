@@ -1,12 +1,12 @@
 % the demo script here
 disp('Hi World')
-beta1 = 1.;
-beta2 = 1.;
-xobs = randn(50,1);
-noise = 0.18*randn(50,1);
+beta1 = 2.;
+beta2 = 5.;
+xobs = 50*(randn(50,1)+1);
+noise = 50*randn(50,1);
 yobs = beta1+beta2*xobs+noise;
 
-tol = 1e-10; learn_rate = 0.01; maxiter = 400; beta_seed = [-10 20];
+tol = 1e-10; learn_rate = 0.0001; maxiter = 400; beta_seed = [-10 20];
 betahat = desc_grad(xobs, yobs, tol, learn_rate, maxiter, beta_seed);
 
 
