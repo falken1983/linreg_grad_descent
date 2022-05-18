@@ -39,3 +39,4 @@ def grad_descent(x, y, tol=1e-10, learn_rate=0.01, maxiter=400, thetaseed=[-10,2
 def linreg_normal_eqs(x, y):
     X = np.concatenate((np.ones(x.shape),x),axis=1) # Concatenating Constant Feature
     theta = np.linalg.pinv(X)@y
+    return theta
